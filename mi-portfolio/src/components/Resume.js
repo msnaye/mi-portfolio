@@ -1,4 +1,4 @@
-import '../../styles/Resume.css';
+import '../styles/Resume.css';
 import React from "react";
 
 function Resume() {
@@ -24,7 +24,7 @@ function Resume() {
                 </ul>
                 <div>
                     My Resume
-                    <a href={require("../../assets/PhotoList/MayraResumeSE.pdf")} download className="download">Download</a>
+                    <a href={require("../assets/PhotoList/MayraResumeSE.pdf")} download className="download">Download</a>
                 </div>
             </div>
         </section>

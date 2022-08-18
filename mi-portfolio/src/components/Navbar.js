@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Navbar.css';
+import '../styles/Navbar.css';
 // import {slide as Menu} from 'react-burger-menu';
 // import { Link } from 'react-scroll';
 
