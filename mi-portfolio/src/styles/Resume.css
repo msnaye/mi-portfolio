@@ -1,0 +1,10 @@
+.ResumeContainer{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to right, rgb(38, 134, 134),rgb(222, 226, 140));
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.ContText {
+    padding: 40px;
+}
