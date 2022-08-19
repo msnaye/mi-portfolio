@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 // import {slide as Menu} from 'react-burger-menu';
-// import { Link } from 'react-scroll';
 
-import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFacebook, FaBars, FaTimes } from 'react-icons/fa';
 //import { capitalizeFirstLetter } from '../../utils/helpers';
-// import { FaBars, FaTimes} from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { Link } from 'react-scroll';
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -13,9 +15,15 @@ const Navbar = () => {
 
   return (
     <div className='mainContainer'>
+      <div>
+      </div>
+
       {/* Main Menu */}
 
-      {/* <ul className="menuContainer">
+      <ul className="menuContainer">
+      <li>
+          <Link to="Home"> Home </Link>
+        </li>
         <li>
           <Link to="About"> About Me </Link>
         </li>
@@ -28,7 +36,37 @@ const Navbar = () => {
         <li>
           <Link to="Contact" >Contact Me </Link>
         </li>
-      </ul> */}
+      </ul>
+
+
+      {/* Hamburger Menu */}
+      <div onClick={handleClick} className='hamburgerMenu'>
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
+
+
+      {/* Mobile Menu */}
+      <ul>
+        <li className={!nav ? 'hidden' : 'absolute'}>
+        </li>
+        <li>
+          <Link onclick={handleClick} to="Home">Home</Link>
+        </li>
+        <li>
+          <Link onclick={handleClick} to="About">About Me</Link>
+        </li>
+        <li>
+          <Link onClick={handleClick} tp="Portfolio">Portfolio </Link>
+        </li>
+        <li>
+          <Link onClick={handleClick} to="Resume">Resume </Link>
+        </li>
+        <li>
+          <Link onClick={handleClick} to="Contact">Contact </Link>
+        </li>
+      </ul>
+
+
 
       {/*website links*/}
       <div className='links'>
@@ -44,35 +82,22 @@ const Navbar = () => {
           <li>
             <a className='links' href='https://www.linkedin.com/feed/'>Linkedin <FaLinkedin /></a>
           </li>
+
+          <li>
+            <a className='links' href='/'>Email <HiOutlineMail /></a>
+          </li>
+
+          <li>
+            <a className='links' href='/'>Resume <BsFillPersonLinesFill /></a>
+          </li>
+
         </ul>
       </div>
-
-      {/* Hamburger Menu */}
-      {/* <div onClick={handleClick} className='hamburgerMenu'>
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div> */}
-
-
-      {/* Mobile Menu */}
-      {/* <ul>
-        <li className={!nav ? 'hidden' : 'absolute'}>
-          </li>
-          <li>
-         <Link onclick={handleClick} to="About">About Me</Link>
-         </li>
-         <li>
-         <Link onClick={handleClick} tp="Portfolio">Portfolio </Link>
-         </li>
-         <li>
-         <Link onClick={handleClick} to="Resume">Resume </Link>
-         </li>
-         <li>
-         <Link onClick={handleClick} to="Contact">Contact </Link>
-        </li>
-      </ul> */}
     </div>
-
-
   );
+
+
 }
+
+
 export default Navbar;

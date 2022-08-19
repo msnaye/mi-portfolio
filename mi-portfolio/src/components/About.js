@@ -9,12 +9,11 @@ function About() {
     <section name='about' className="mytag">
       <h1 className="about-me">About Me</h1>
       <div className="bgC">
-        <h2 className='me'>Hi, my name is </h2>
-        <h1 className='me'>Mayra Ibarra</h1>
+        
         <div>
           <img src={coverImage}/>
+        <p>Hi, I am Mayra, it's very nice to meet you. Please checkout my portfolio.</p>
         </div>
-        
         <p className='myName'>
           I provide digital products that are creative and user-friendly.
           My services are perfect for small businesses and for personal use.
